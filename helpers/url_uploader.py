@@ -1,3 +1,4 @@
+from email.message import Message
 import math, requests, os, time, datetime, aiohttp, asyncio, mimetypes, gdown, logging, functools
 from pyrogram import Client, filters
 from concurrent.futures import ThreadPoolExecutor
@@ -15,7 +16,10 @@ from helpers.thumbnail_video import thumb_creator
 from helpers.youtube import ytdl
 from helpers.file_spliter import split_large_files
 from main import Config
-
+from pyrogram.types import (
+    CallbackQuery,
+    Message,
+)
 logger = logging.getLogger(__name__)
 download_path = "Downloads/"
 
@@ -33,13 +37,13 @@ def gd_link_dl(url, file_path):
     gdown.download(url, file_path, quiet=False)
 
 
-async def leecher2(bot , u):
-    if not u.reply_to_message:
+async def leecher2(bot , u:Message):
+    if not u.text.startswith('https'):
         await u.reply_text(text=f"Reply To Your Direct Link !", quote=True)
         return
-    
+
     sw = "direct"
-    m = u.reply_to_message
+    m = u
     
     if "|" in m.text:
         url , cfname = m.text.split("|", 1)
