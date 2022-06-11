@@ -58,7 +58,7 @@ and Rename Audio/Video/Document Files.
 @Client.on_message(filters.command(["start"]))
 async def start(client , m):
     """Send a message when the command /start is issued."""
-    await m.reply_text(text=f"Hi\n\nI am Gdrive To Telegram Uploder Bot 🤖\nThis Bot Is Only For Primium Useres 💤\nI Was Developed By[Indian Developer](https://telegram.me/Professional_Seller200)🧑‍💻\nI Was Deployed On A Speedest VpS ⚡\nYou Wnat To Use This Bot Get Accuses From [➢🤠ME](t.me/Professional_Seller200)\n\nYO YO😎")
+    await m.reply_text(text=f"**Hi\nI am Gdrive To Telegram Uploder Bot 🤖\nThis Bot Is Only For Primium Useres 💤\nI Was Developed By➢ [Indian Developer](https://telegram.me/Professional_Seller200)🧑‍💻\nI Was Deployed On A Speedest VpS ⚡\nYou Wnat To Use This Bot Get Accuses From [➢🤠ME](t.me/Professional_Seller200)\nYO YO😎**")
 
     
 @Client.on_message(filters.command(["hell"]))
