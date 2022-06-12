@@ -71,6 +71,16 @@ async def help(client , m):
     """Send a message when the command /help is issued."""
     await m.reply_text(text=f"**Dude You Really Need Help ? 🤔\nSee Hear All Commands 👇🏻\n /start - To Start Me 😈\n /help - To Get Help 🤗\n /Plans - To Know Plans 💰\n /support - To Get Support From Our Team 🤝🏻\n Don't Forgot [Me](t.me/professional_Seller200) Dude ❤️**")  
 
+@Client.on_message(filters.command(["support"]))
+async def help(client , m):
+    """Send a message when the command /support is issued."""
+    await m.reply_text(text=f"**We Will Support You Bruh ⚡\n @Professional_Seller200 | @Bhatmanju**")
+
+@Client.on_message(filters.command(["plans"]))
+async def help(client , m):
+    """Send a message when the command /plans is issued."""
+    await m.reply_text(text=f"**Sorry Bruh Plan Is Not Fixed Yet Please Contact @Professional_Seller200 🥺**")
+
 @Client.on_message(filters.private & filters.command(["rnv"]))
 async def rnv1(client , u):
 
