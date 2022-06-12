@@ -64,7 +64,12 @@ async def start(client , m):
 @Client.on_message(filters.command(["hell"]))
 async def help(client , m):
     """Send a message when the command /hell is issued."""
-    await m.reply_text(text=f"{HELP_TXT}")   
+    await m.reply_text(text=f"{HELP_TXT}") 
+
+@Client.on_message(filters.command(["help"]))
+async def help(client , m):
+    """Send a message when the command /help is issued."""
+    await m.reply_text(text=f"**Dude You Really Need Help ? 🤔\nSee Hear All Commands 👇🏻\n /start - To Start Me 😈\n /help - To Get Help 🤗\n /Plans - To Know Plans 💰\n /support - To Get Support From Our Team 🤝🏻\n Don't Forgot [Me](t.me/professional_Seller200) Dude ❤️")  
 
 @Client.on_message(filters.private & filters.command(["rnv"]))
 async def rnv1(client , u):
@@ -75,7 +80,7 @@ async def rnv1(client , u):
         await rnv2(client , u)
     else:
         await u.reply_text(text=f"sorry ! you cant use this bot.\n\ndeploy your own bot:\n[Repository_Link](https://github.com/prxpostern/URLtoTG001)", quote=True, disable_web_page_preview=True)
-        return
+        returns 
     
 @Client.on_message(filters.private & filters.command(["rna"]))
 async def rna1(client , u):
